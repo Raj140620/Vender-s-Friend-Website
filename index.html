@@ -15,6 +15,13 @@
       referrerpolicy="no-referrer"
     />
 
+     <!-- Bootstrap CSS v5.2.1 -->
+     <link
+     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+     rel="stylesheet"
+     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+     crossorigin="anonymous">
+
     <!-- Swiper JS CDN  -->
     <link
       rel="stylesheet"
@@ -22,106 +29,188 @@
     />
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="#" class="logo"
-          ><i class="fas fa-shopping-basket"></i>Ven's Pal
-        </a>
-        <div>
-          <i class="fas fa-stream" id="menu-icon"></i>
-        </div>
-
-        <!-- Nav Lists -->
-        <ul class="navbar">
-          <li><a href="#home" class="home-active">Home</a></li>
-          <li><a href="#categories">Categories</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#customers">Customers</a></li>
-
-          <!-- Profile Image  -->
-          <div class="profile">
-            <img src="./images/Profile-image.png" alt="Profile-image" />
-            <span>Rakesh Gupta</span>
-            <i class="fa-solid fa-caret-down"></i>
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Offcanvas navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">NAV LOGO</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-        </ul>
-      </nav>
-    </header>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#categories">Categories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#products">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#customers">Customers</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+      </div>
+    </nav>
+
+    
 
     <!-- Home Section -->
-    <section class="home swiper" id="home">
-      <div class="swiper-wrapper">
-        <!-- Slider - 1 -->
-        <div class="swiper-slide container">
-          <div class="home-text">
-            <span>Lorem ipsum dolor sit amet1.</span>
-            <h1>
-              Lorem, ipsum dolor.<br />Lorem, ipsum dolor.<br />Lorem, ipsum
-              dolor.
-            </h1>
-            <button href="#" class="btn">
-              Shop Now<i class="fa-solid fa-arrow-right"></i>
-            </button>
+     <section id="home" class="home">
+    <main>
+      <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+          <ol class="carousel-indicators">
+              <li
+                  data-bs-target="#carouselId"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="First slide"
+              ></li>
+              <li
+                  data-bs-target="#carouselId"
+                  data-bs-slide-to="1"
+                  aria-label="Second slide"
+              ></li>
+              <li
+                  data-bs-target="#carouselId"
+                  data-bs-slide-to="2"
+                  aria-label="Third slide"
+              ></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                  <img height="650px"
+                      src="./images/Fruit-eating.png"
+                      class="w-100 d-block"
+                      alt="First slide"
+                  />
+              </div>
+              <div class="carousel-item">
+                  <img
+                      height="650px"
+                      src="./images/Fruits.png"
+                      class="w-100 d-block"
+                      alt="Second slide"
+                  />
+              </div>
+              <div class="carousel-item">
+                  <img height="650px"
+                      src="./images/Fruit-eating.png"
+                      class="w-100 d-block"
+                      alt="Third slide"
+                  />
+              </div>
           </div>
-          <img src="./images/Fruits.png" alt="fruit" />
-        </div>
+          <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselId"
+              data-bs-slide="prev"
+          >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselId"
+              data-bs-slide="next"
+          >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+      
 
-        <!-- Slider - 2 -->
-        <div class="swiper-slide container">
-          <div class="home-text">
-            <span>Lorem ipsum dolor sit amet2.</span>
-            <h1>
-              Lorem, ipsum dolor.<br />Lorem, ipsum dolor.<br />Lorem, ipsum
-              dolor.
-            </h1>
-            <button href="#" class="btn">
-              Shop Now<i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-          <img src="./images/Profile-image.png" alt="fruit" />
-        </div>
-        <!-- Slider - 3 -->
-        <div class="swiper-slide container">
-          <div class="home-text">
-            <span>Lorem ipsum dolor sit amet3.</span>
-            <h1>
-              Lorem, ipsum dolor.<br />Lorem, ipsum dolor.<br />Lorem, ipsum
-              dolor.
-            </h1>
-            <button href="#" class="btn">
-              Shop Now<i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-          <img src="./images/Fruits.png" alt="fruit" />
-        </div>
+  </main>
 
-        <!-- Slider - 4 -->
-        <div class="swiper-slide container">
-          <div class="home-text">
-            <span>Lorem ipsum dolor sit amet4.</span>
-            <h1>
-              Lorem, ipsum dolor.<br />Lorem, ipsum dolor.<br />Lorem, ipsum
-              dolor.
-            </h1>
-            <button href="#" class="btn">
-              Shop Now<i class="fa-solid fa-arrow-right"></i>
-            </button>
+  
+   <!-- Counter Section -->
+   <section id="counter">
+    <section class="counter">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 mb-lg-0 mb-md-0 mb-0 col-sm-6">
+            <h3>
+              <span id="count1"></span>+
+            </h3>
+            <p>Products</p>
           </div>
-          <img src="./images/Profile-image.png" alt="fruit" />
+          <div class="col-md-3 mb-lg-0 mb-md-0 mb-0 col-sm-6">
+            <h3>
+              <span id="count2"></span>+
+            </h3>
+            <p>
+              Categories
+            </p>
+          </div>
+          <div class="col-md-3 mb-lg-0 mb-md-0 mb-0 col-sm-6">
+            <h3>
+              <span id="count3"></span>+
+            </h3>
+            <p>Vendors</p>
+          </div>
+          <div class="col-md-3 mb-lg-0 mb-md-0 mb-0 col-sm-6">
+            <h3>
+              <span id="count4"></span>+
+            </h3>
+            <p>Happy Clients</p>
+          </div>
         </div>
       </div>
-
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
     </section>
+  </section>
 
     <!-- Categories Section -->
     <section class="categories" id="categories">
       <div class="heading">
-        <h1>Browse Our Hottest<br /><span>Categories</span></h1>
-        <button href="#" class="btn">
+        <h1 class="p-3">Browse Our Hottest<br /><span>Categories</span></h1>
+        <button href="#" class=" button">
           See All<i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
@@ -130,35 +219,35 @@
       <div class="categories-container">
         <!-- Box 1  -->
         <div class="box box1">
-          <img src="./images/Fruits.png" alt="fruit" />
+          <img src="./images/categories/fruits.png" alt="fruit" />
           <h2>Fruits</h2>
           <span>15 Items</span>
           <i class="fa-solid fa-arrow-right"></i>
         </div>
         <!-- Box 2  -->
         <div class="box box2">
-          <img src="./images/Fruits.png" alt="fruit" />
+          <img src="./images/categories/vegetables.png" alt="fruit" />
           <h2>Vegetables</h2>
           <span>15 Items</span>
           <i class="fa-solid fa-arrow-right"></i>
         </div>
         <!-- Box 3  -->
         <div class="box box3">
-          <img src="./images/Fruits.png" alt="fruit" />
+          <img src="./images/categories/fruits.png" alt="fruit" />
           <h2>Season Fruits</h2>
           <span>15 Items</span>
           <i class="fa-solid fa-arrow-right"></i>
         </div>
         <!-- Box 4  -->
         <div class="box box4">
-          <img src="./images/Fruits.png" alt="fruit" />
+          <img src="./images/categories/medicines.png" alt="fruit" />
           <h2>Medicines</h2>
           <span>15 Items</span>
           <i class="fa-solid fa-arrow-right"></i>
         </div>
         <!-- Box 5  -->
         <div class="box box5">
-          <img src="./images/Fruits.png" alt="fruit" />
+          <img src="./images/categories/beverages.png" alt="fruit" />
           <h2>Drinks</h2>
           <span>15 Items</span>
           <i class="fa-solid fa-arrow-right"></i>
@@ -169,8 +258,8 @@
     <!-- Products Section -->
     <section class="products" id="products">
       <div class="heading">
-        <h1>Popular<br /><span>Products</span></h1>
-        <button href="#" class="btn">
+        <h1 class="p-3">Popular<br /><span>Products</span></h1>
+        <button href="#" class=" button">
           Shop Now<i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
@@ -179,7 +268,7 @@
       <div class="products-container">
         <!-- Box - 1 -->
         <div class="box">
-          <img src="./images/Fruits.png" alt="fruit" />
+          <img src="./images/products/apple.png" alt="apple-image" />
           <span>Fresh Items</span>
           <h2>Farm fresh organic<br />fruits 250g</h2>
           <h3 class="price">$7.99<span>/KG</span></h3>
@@ -189,7 +278,7 @@
         </div>
         <!-- Box - 2 -->
         <div class="box">
-          <img src="./images/Fruits.png" alt="fruit" />
+          <img src="./images/products/orange.png" alt="orange-image" />
           <span>Fresh Items</span>
           <h2>Farm fresh organic<br />fruits 250g</h2>
           <h3 class="price">$7.99<span>/KG</span></h3>
@@ -199,7 +288,7 @@
         </div>
         <!-- Box - 3 -->
         <div class="box">
-          <img src="./images/Fruits.png" alt="fruit" />
+          <img src="./images/products/choped-fruit.png" alt="choped-fruit-image" />
           <span>Fresh Items</span>
           <h2>Farm fresh organic<br />fruits 250g</h2>
           <h3 class="price">$7.99<span>/KG</span></h3>
@@ -209,7 +298,7 @@
         </div>
         <!-- Box - 4 -->
         <div class="box">
-          <img src="./images/Fruits.png" alt="fruit" />
+          <img src="./images/products/potato.png" alt="potato-image" />
           <span>Fresh Items</span>
           <h2>Farm fresh organic<br />fruits 250g</h2>
           <h3 class="price">$7.99<span>/KG</span></h3>
@@ -217,6 +306,66 @@
           <i class="fa-regular fa-heart"></i>
           <span class="discount">-25%</span>
         </div>
+        <!-- Box - 5 -->
+        <div class="box">
+          <img src="./images/products/onion.png" alt="onion-image" />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic<br />fruits 250g</h2>
+          <h3 class="price">$7.99<span>/KG</span></h3>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-regular fa-heart"></i>
+          <span class="discount">-25%</span>
+        </div>
+        <!-- Box - 6-->
+        <div class="box">
+          <img src="./images/products/spinach.png" alt="spinach-image" />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic<br />fruits 250g</h2>
+          <h3 class="price">$7.99<span>/KG</span></h3>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-regular fa-heart"></i>
+          <span class="discount">-25%</span>
+        </div>
+        <!-- Box - 7 -->
+        <div class="box">
+          <img src="./images/products/cola.png" alt="fruit" />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic<br />fruits 250g</h2>
+          <h3 class="price">$7.99<span>/KG</span></h3>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-regular fa-heart"></i>
+          <span class="discount">-25%</span>
+        </div>
+        <!-- Box - 8 -->
+        <div class="box">
+          <img src="./images/products/ice-cream.png" alt="fruit" />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic<br />fruits 250g</h2>
+          <h3 class="price">$7.99<span>/KG</span></h3>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-regular fa-heart"></i>
+          <span class="discount">-25%</span>
+        </div>
+        <!-- Box - 9 -->
+        <div class="box">
+          <img src="./images/products/chees.png" alt="fruit" />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic<br />fruits 250g</h2>
+          <h3 class="price">$7.99<span>/KG</span></h3>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-regular fa-heart"></i>
+          <span class="discount">-25%</span>
+        </div>
+
+
+
+
+
+
+
+
+
+
       </div>
     </section>
 
@@ -224,7 +373,7 @@
     <section class="about" id="about">
       <img src="./images/Fruit-eating.png" alt="about" />
       <div class="about-text">
-        <span>About Us</span>
+        <div class="heading"><h1>About Us</h1></div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
           accusamus ipsum reiciendis rem iure minima veniam quaerat illum
@@ -235,15 +384,17 @@
           accusamus ipsum reiciendis rem iure minima veniam quaerat illum
           aperiam et!
         </p>
-        <button href="#" class="btn">
+        <button href="#" class=" button">
           Learn More<i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
     </section>
 
     <!-- Customer  Section -->
-    <section class="Customers" id="customers">
-      <h2>Why Customers Love Us</h2>
+    <section class="customers" id="customers">
+      <div class="heading">
+      <h1 class="p-3">Why Customers<br><span> Love Us ?</span></h1>
+    </div>
       <!-- Customers Content -->
       <div class="customers-container">
         <!-- Customers Review 1 -->
@@ -256,10 +407,8 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star-half-stroke"></i>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            quaerat qui neque harum eos optio sint dignissimos ipsa quibusdam
-            cumque.
+          <p class="pt-3">
+            Fantastic selection of fresh vegetables and fruits! Delivery was prompt, and the produce quality was exceptional. Highly recommend!
           </p>
           <div class="review-profile">
             <img src="./images/users/user-1.png" alt="users" />
@@ -271,16 +420,14 @@
         <div class="box">
           <i class="fa-solid fa-quote-left"></i>
           <div class="stars">
-            <i class="fa-solid fa-star" style="color: #ffc800"></i>
-            <i class="fa-solid fa-star" style="color: #ffc800"></i>
-            <i class="fa-solid fa-star" style="color: #ffc800"></i>
-            <i class="fa-solid fa-star" style="color: #ffc800"></i>
-            <i class="fa-solid fa-star-half-stroke" style="color: #ffc800"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            quaerat qui neque harum eos optio sint dignissimos ipsa quibusdam
-            cumque.
+          <p class="pt-3">
+            Great experience shopping for groceries online. The website is user-friendly, and the items arrived fresh and well-packed. Will definitely order again!
           </p>
           <div class="review-profile">
             <img src="./images/users/user-2.png" alt="users" />
@@ -292,20 +439,18 @@
         <div class="box">
           <i class="fa-solid fa-quote-left"></i>
           <div class="stars">
-            <i class="fa-solid fa-star" style="color: #ffc800"></i>
-            <i class="fa-solid fa-star" style="color: #ffc800"></i>
-            <i class="fa-solid fa-star" style="color: #ffc800"></i>
-            <i class="fa-solid fa-star" style="color: #ffc800"></i>
-            <i class="fa-solid fa-star-half-stroke" style="color: #ffc800"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            quaerat qui neque harum eos optio sint dignissimos ipsa quibusdam
-            cumque.
+          <p class="pt-3">
+            Impressed with the variety and quality of products. Easy navigation and quick delivery. This has become my go-to site for groceries!
           </p>
           <div class="review-profile">
             <img src="./images/users/user-3.png" alt="users" />
-            <h3>Scarlett Johansson</h3>
+            <h3>Scarlett Johanson</h3>
           </div>
         </div>
       </div>
@@ -313,10 +458,10 @@
 
 
     <!-- Footer  Section -->
-     <footer>
+     
       <section class="footer" id="footer">
         <div class="footer-box">
-          <button href="#" class="btn">
+          <button href="#" class=" button">
             Delicacy<i class="fa-solid fa-arrow-right"></i>
           </button>
           <p>Bengaluru, 4th Street 5th<br>Floor, Karnataka 560022</p>
@@ -352,11 +497,33 @@
         </form>
         </div>
       </section>
-     </footer>
+
+      <!-- Copyright Part -->
+       <div class="copyright">
+       <p>&#169; Cart_Wala All Right Reserved</p>
+      </div>
+     
+
+
+
+       <!-- Bootstrap JavaScript Libraries -->
+       <script
+       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+       crossorigin="anonymous"
+   ></script>
+
+   <script
+       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+       crossorigin="anonymous"
+   ></script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- Own JS Link -->
     <script src="./js/main.js"></script>
+
   </body>
 </html>
