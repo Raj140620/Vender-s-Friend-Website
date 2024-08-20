@@ -1,0 +1,175 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Profile Modal</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    /* Profile card styling within the modal */
+    .profile-card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .profile-heading {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #343a40;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+
+    .profile-pic-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .upload-icon {
+      position: absolute;
+      bottom: 10px;
+      right: 50%;
+      transform: translateX(50%);
+      background-color: #6c757d;
+      color: #fff;
+      padding: 5px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+
+      .profile-card {
+        padding: 20px;
+        margin: 20px 30px;
+      }
+
+      .profile-heading {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .profile-card {
+        padding: 15px;
+        margin: 20px 15px;
+      }
+
+      .profile-heading {
+        font-size: 1.3rem;
+      }
+
+      .form-label {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Button trigger modal -->
+  <div class="text-center mt-5">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateProfileModal">
+      Edit Profile
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="updateProfileModal" tabindex="-1" aria-labelledby="updateProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updateProfileModalLabel">Update Profile</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Profile Update Section -->
+          <div class="profile-card">
+            <h2 class="profile-heading">Edit Profile</h2>
+
+            <!-- Profile Picture Update -->
+            <div class="profile-pic-wrapper">
+              <img src="https://via.placeholder.com/120" alt="Profile Picture" class="profile-pic" id="profileImage">
+              <label for="uploadPic" class="upload-icon">
+                <i class="bi bi-camera-fill"></i>
+              </label>
+              <input type="file" id="uploadPic" style="display:none;" onchange="previewImage(event)">
+            </div>
+
+            <!-- Profile Update Form -->
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+              </div>
+              <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" id="location" placeholder="Enter your location" required>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary btn-block">Update Profile</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS for Previewing Profile Picture -->
+  <script>
+    function previewImage(event) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const profileImage = document.getElementById('profileImage');
+        profileImage.src = reader.result;
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Bootstrap Login | Ludiflex</title>
+    <style>
+        .left-box {
+            background: green;
+        }
+        .left-box .featured-image {
+            width: 100%;
+            max-width: 250px;
+        }
+        .left-box p, .left-box small {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .right-box {
+            padding: 2rem;
+        }
+        .box-area {
+            max-width: 900px;
+        }
+    </style>
+</head>
+<body>
+    <!----------------------- Main Container -------------------------->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <!----------------------- Login Container -------------------------->
+        <div class="row border rounded-5 p-3 bg-white shadow box-area w-100 mx-1">
+            <!--------------------------- Left Box ----------------------------->
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box text-center main-box">
+                <div class="featured-image mb-3">
+                    <img src="./images/login/signup.svg" class="img-fluid" alt="Featured Image">
+                </div>
+                <p class="text-white fs-2 fw-bold">Be Verified</p>
+                <small class="text-white text-wrap" style="width: 17rem;">Join experienced Designers on this platform.</small>
+            </div> 
+            <!-------------------- ------ Right Box ---------------------------->
+            <div class="col-md-6 right-box">
+                <div class="row align-items-center">
+                    <div class="header-text mb-4">
+                        <h2>Reset Password</h2>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Account Type" list="account-type">
+                        <datalist id="account-type">
+                            <option>Customer</option>
+                            <option>Vendor</option>
+                        </datalist>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email address">
+                    </div>
+                    <div class="input-group mb-3 mt-3">
+                        <button class="btn btn-lg btn-outline-success w-100 fs-6">Submit</button>
+                    </div>
+                   
+                </div>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>
