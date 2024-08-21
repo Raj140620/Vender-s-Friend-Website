@@ -418,6 +418,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       </div>
     </section>
 
+    <!-- Chatbot -->
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "90b1ec89-08b8-4214-b16d-e1be8c4ce609", // The ID of this integration.
+        region: "au-syd", // The region your integration is hosted in.
+        serviceInstanceID: "ae571130-5437-42b9-9dd3-897cf475d1d7", // The ID of your service instance.
+        onLoad: async (instance) => { await instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
 
     <!-- Footer  Section -->
      
