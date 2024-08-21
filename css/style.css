@@ -67,10 +67,24 @@ img {
     .navbar-custom.navbar-scrolled,
     .navbar-custom.navbar-expanded {
       background-color:var(--bg-color);
-      box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1); 
-      color: #000;
+      box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+
+      
+      
     }
-    
+
+    .navbar-custom.navbar-scrolled .nav-link,
+    .navbar-custom.navbar-expanded .nav-link {
+      color: var(--text-color);
+      font-weight: bold;
+
+    }
+    .navbar-custom.navbar-scrolled .navbar-brand,
+    .navbar-custom.navbar-expanded .navbar-brand{
+      color: var(--text-color);
+
+    }
     .navbar-brand {
       font-size: 30px;
       font-weight: bold;
@@ -78,10 +92,7 @@ img {
       transition: color 0.3s ease;
     }
     
-    .navbar-brand:hover {
-      color: var(--green-color);
-      transform: scale(1.1);
-    }
+    
     
     /* Navbar Links Styling */
     .nav-link {
@@ -112,9 +123,7 @@ img {
       color:var(--green-color);
       transform: translateY(-3px);
     }
-
-
-   
+    
     
     /* Toggler Styles */
     .navbar-toggler {
