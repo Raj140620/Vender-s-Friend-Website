@@ -59,7 +59,7 @@ img {
 }
     /* Navbar Styles */
     .navbar-custom {
-      background-color: transparent;
+      background-color:rgba(0, 0, 0, 0.1);
       transition: background-color 0.5s ease;
       padding: 15px 20px;
     }
@@ -69,9 +69,6 @@ img {
       background-color:var(--bg-color);
       box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
       font-weight: bold;
-
-      
-      
     }
 
     .navbar-custom.navbar-scrolled .nav-link,
@@ -134,7 +131,6 @@ img {
       outline: none;
       box-shadow: none;
     }
-    
     .navbar-toggler-icon {
       background-image: none;
       width: 30px;
@@ -163,6 +159,7 @@ img {
     
     .navbar-toggler-icon::after {
       top: 10px;
+
     }
     
     .navbar-toggler.collapsed .navbar-toggler-icon {
@@ -177,16 +174,90 @@ img {
     .navbar-toggler.collapsed .navbar-toggler-icon::after {
       transform: rotate(90deg);
       top: 0;
+
     }
- 
+
+
+
+    /* Modal background and content styling */
+    .modal-content {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      background-color: #f8f9fa;
+      text-align: center;
+  }
+
+  /* Modal header styling */
+  .modal-header {
+      border-bottom: none;
+      position: relative;
+      padding: 2rem;
+  }
+
+  .modal-header img.logo {
+      width: 100px;
+      border-radius: 50%;
+      border: 3px solid green;
+  }
+
+  /* Image styling */
+  .modal-body img {
+      width: 100%;
+      border-radius: 10px;
+      max-height: 300px;
+      object-fit: cover;
+      filter: brightness(0.9) contrast(1.2);
+  }
+
+  /* Center the greeting and intro */
+  .modal-body .content {
+      padding: 1rem;
+     
+  }
+
+  /* Stylish text */
+  .modal-body h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: black;
+      margin-bottom: 0.5rem;
+  }
+
+  .modal-body p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      color:black;
+  }
+
+  /* Button styling */
+  .modal-footer {
+      border-top: none;
+      /* padding: 2rem; */
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+  }
+  .modal-backdrop {
+    z-index: 1;
+}
+
 
     /* Home Section */
 
 /* Make Images Responsive */
+
 .carousel-item img {
   object-fit: cover;
   height: 85vh;
   width: 100%;
+}
+.home{
+  /* background-color:rgba(150, 150, 150, 0.1); */
+  background-color:rgba(0, 0, 0, 0.1);
+
+
 }
 
 
