@@ -88,7 +88,10 @@ img {
       color: #fff;
       transition: color 0.3s ease;
     }
-    
+    /* .navbar-brand:hover {
+      color: #fff;
+    }
+     */
     
     
     /* Navbar Links Styling */
@@ -108,7 +111,7 @@ img {
       height: 3px;
       bottom: -5px;
       left: 0;
-      background-color:var(--green-color);
+      background-color:var(--orange-color);
       transition: 0.3s ease;
     }
     
@@ -135,7 +138,7 @@ img {
       background-image: none;
       width: 30px;
       height: 2px;
-      background-color: black;
+      background-color: var(--bg-color);
       position: relative;
       transition: all 0.3s ease;
       border: none;
@@ -146,7 +149,7 @@ img {
       content: '';
       width: 30px;
       height: 2px;
-      background-color: black;
+      background-color: var(--bg-color);
       position: absolute;
       left: 0;
       transition: all 0.3s ease;
